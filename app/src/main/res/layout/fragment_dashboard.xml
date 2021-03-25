@@ -8,17 +8,156 @@
     android:paddingHorizontal="20dp"
     tools:context=".ui.dashboard.DashboardFragment">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logobrain" />
+
     <TextView
-        android:id="@+id/text_dashboard"
+        android:id="@+id/text_QWhat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/what_do_you_want_to_remember"
+        android:textColor="@color/colorAccent"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/take_my_pill"
+        android:textSize="15sp"
+        android:background="@color/white"
+        android:textColor="@color/gray"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/text_QWhen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/when_do_you_want_to_it"
+        android:textColor="@color/colorAccent"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/text_Monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/monday"
+                android:textColor="@color/gray"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/text_Tusday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/tusday"
+                android:textColor="@color/gray"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/text_Wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/wednesday"
+                android:textColor="@color/gray"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/text_Thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/thursday"
+                android:textColor="@color/gray"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/text_Friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/friday"
+                android:textColor="@color/gray"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/text_Saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/saturday"
+                android:textColor="@color/gray"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/text_Sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/sunday"
+                android:textColor="@color/gray"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/text_QTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/at_what_time"
+        android:textColor="@color/colorAccent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set time"
+        android:background="?android:attr/selectableItemBackground"
+        />
+
+
 </LinearLayout>
