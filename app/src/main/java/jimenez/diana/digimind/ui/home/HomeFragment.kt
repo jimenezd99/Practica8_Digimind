@@ -11,12 +11,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import jimenez.diana.digimind.R
+import jimenez.diana.digimind.Task
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class HomeFragment : Fragment() {
-
+    var task= ArrayList<Task>()
     private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
@@ -28,18 +30,16 @@ class HomeFragment : Fragment() {
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         //val textView: TextView = root.findViewById(R.id.text_home)
-        btn_time.setOnClickListener(){
-            val cal= Calendar.getInstance()
-            val timeSetListener= TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
-                cal.set(Calendar.HOUR_OF_DAY, hour)
-                cal.set(Calendar.MINUTE, minute)
 
-                btn_time.text=SimpleDateFormat("HH:mm").format(cal.time)
-            }
-            TimePickerDialog(root.context,timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), true).show()
-
-        }
 
         return root
+    }
+
+    fun fillTask(){
+        task.add(Task("Practice 1", arrayListOf("Monday"), "17:30"))
+        task.add(Task("Practice 2", arrayListOf("Monday", "Sunday"), "17:00"))
+        task.add(Task("Practice 3", arrayListOf("Wednesday"), "14:00"))
+        task.add(Task("Practice 4", arrayListOf("Saturday"), "11:00"))
+        task.add(Task("Practice 5", arrayListOf("Friday"), "13:00"))
     }
 }
